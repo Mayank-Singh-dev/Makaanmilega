@@ -72,17 +72,17 @@ const Header = () => {
             transition={{ duration: 1 }}
             className="flex items-center gap-8"
           >
-            <li className="headerMenus">Home</li>
-            <li className="headerMenus">Projects</li>
-            <li className="headerMenus">About-us</li>
-            <li className="headerMenus">Services</li>
+            <Link to={"/"} className="headerMenus"> Home</Link>
+            <Link to={"/"} className="headerMenus">Projects</Link>
+            <Link to={"/"} className="headerMenus">About-us</Link>
+            <Link to={"/"} className="headerMenus">Services</Link>
           </motion.ul>
-          <div className="relative flex items-center justify-center">
+          {/* <div className="relative flex items-center justify-center">
             <AiOutlineHeart className="text-textColor text-2xl cursor-pointer" />
             <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-cartNumBg flex items-center justify-center">
               <p className="text-xs text-white font-semibold">2</p>
             </div>
-          </div>
+          </div> */}
           <div className="relative" ref={menuRef}>
             <motion.img
               whileTap={{ scale: 0.6 }}
@@ -99,7 +99,7 @@ const Header = () => {
                 transition={{ delay: 0.1 }}
                 className="w-40 bg-gray-50 shadow-xl rounded-lg flex flex-col absolute top-10 right-0"
               >
-                {user && user.email === "mayankphenomuraaaa@gmail.com" && (
+                {user  && (
                   <Link to={"/createItem"}>
                     <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text text-textColor text-base" onClick={()=>setIsMenu(false)}>
                       New Item<MdAdd />
@@ -175,3 +175,5 @@ const Header = () => {
 };
 
 export default Header;
+
+// && user.email === "mayankphenomuraaaa@gmail.com"

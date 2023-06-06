@@ -4,12 +4,10 @@ import { useStateValue } from "../context/Stateprovider";
 
 const ProtectedRoute = ({ children }) => {
   const {user}  = useStateValue()[0];
-  if (!user || user.email !== "mayankphenomuraaaa@gmail.com") {
-    console.log(user?.email);
+  if (!user  ) {
     return <Navigate to="/" replace />;
   }
   return children;
 };
 
 export default ProtectedRoute;
-

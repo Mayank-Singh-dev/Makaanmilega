@@ -1,0 +1,34 @@
+.contain {
+  margin-top: 54.3rem;
+}
+
+@media (min-height: 600px) {
+  .contain {
+    margin-top: 36rem;
+  }
+}
+@media (min-height: 700px) {
+  .contain {
+    margin-top: 41rem;
+  }
+}
+@media (min-height: 800px) {
+  .contain {
+    margin-top: 50rem;
+  }
+}
+@media (min-height: 1000px) {
+  .contain {
+    margin-top: 57rem;
+  }
+}
+@media (min-height: 1100px) {
+  .contain {
+    margin-top: 66rem;
+  }
+}
+@media (min-height: 1200px) {
+  .contain {
+    margin-top: 79rem;
+  }
+}
